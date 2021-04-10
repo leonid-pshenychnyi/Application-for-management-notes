@@ -30,6 +30,9 @@ run in project therminal
 npm install
 ```
 
+## Step 4.
+
+restore nuget packages
 
 ```bash
 nuget restore

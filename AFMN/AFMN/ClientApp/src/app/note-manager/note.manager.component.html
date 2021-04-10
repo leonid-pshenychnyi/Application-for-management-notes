@@ -1,0 +1,51 @@
+﻿<h1 class="container">{{'NOTES.LIST' | translate}}</h1>
+<input type="button" value="{{'NOTES.ADD' | translate}}" class="btn btn-default" (click)="add()"/>
+<table *ngIf="tableMode; else create" class="table table-bordered">
+  <thead class="thead-dark">
+  <tr>
+    <td scope="col">{{'NOTES.NAME' | translate}}</td>
+    <td scope="col">{{'NOTES.TEXT' | translate}}</td>
+    <td></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let n of notes">
+    <ng-template [ngIf]="note?.id != n.id" [ngIfElse]="edit">
+      <td>{{n?.name}}</td>
+      <td>{{n?.text}}</td>
+      <td>
+        <button class="btn btn-sm btn-primary" (click)="editNote(n)">{{'NOTES.CHANGE' | translate}}</button>
+        <button class="btn btn-sm btn-danger" (click)="delete(n)">{{'NOTES.DELETE' | translate}}</button>
+      </td>
+    </ng-template>
+  </tr>
+  </tbody>
+</table>
+
+<ng-template #edit>
+  <td>
+    <input type="text" [(ngModel)]="note.name" class="form-control"/>
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="note.text" class="form-control"/>
+  </td>
+  <td>
+    <input type="button" value="{{'NOTES.SAVE' | translate}}" (click)="save()" class="btn btn-sm btn-success"/>
+    <input type="button" value="{{'NOTES.CANCEL' | translate}}" (click)="cancel()" class="btn btn-sm btn-warning"/>
+  </td>
+</ng-template>
+
+<ng-template #create>
+  <div class="form-group">
+    <label>{{'NOTES.NAME' | translate}}</label>
+    <input type="text" [(ngModel)]="note.name" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label>{{'NOTES.TEXT' | translate}}</label>
+    <input type="text" [(ngModel)]="note.text" class="form-control"/>
+  </div>
+  <div>
+    <input type="button" value="{{'NOTES.SAVE' | translate}}" (click)="save()" class="btn btn-success"/>
+    <input type="button" value="{{'NOTES.CANCEL' | translate}}" (click)="cancel()" class="btn btn-warning"/>
+  </div>
+</ng-template>

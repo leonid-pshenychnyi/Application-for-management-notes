@@ -1,0 +1,30 @@
+﻿{
+  "HOME": {
+    "TITLE": "Welcome to Application for management notes!",
+    "P": "In this application you can:",
+    "LI": "Read all notes",
+    "LI1": "Create note",
+    "LI2": "Update note",
+    "LI3": "Delete note",
+    "P1": "Good luck!"
+  },
+  "BUTTON": {
+    "LANG": {
+      "RU": "Russian",
+      "EN": "English"
+    }
+  },
+  "NAV": {
+    "NOTES": "Notes"
+  },
+  "NOTES": {
+    "LIST": "Notes List",
+    "NAME": "Name",
+    "TEXT": "Text",
+    "ADD": "Add Note",
+    "CHANGE": "Change",
+      "DELETE": "Delete",
+    "SAVE": "Save",
+    "CANCEL": "Cancel"
+  }
+}
