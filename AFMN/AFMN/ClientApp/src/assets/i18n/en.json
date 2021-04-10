@@ -11,7 +11,8 @@
   "BUTTON": {
     "LANG": {
       "RU": "Russian",
-      "EN": "English"
+      "EN": "English",
+      "CHANGE": "Change language"
     }
   },
   "NAV": {
