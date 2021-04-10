@@ -24,12 +24,11 @@ Launch the .sln via Visual Studio / Rider
 
 ## Step 3.
 
-run in project therminal
+run in project therminal next commands:
 
 ```bash
 npm install
 ```
-
 
 ```bash
 nuget restore
